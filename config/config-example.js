@@ -15,13 +15,13 @@ exports.bot = {
 };
 
 // this is the command character used in PMs and public rooms that do not specify what command character they want
-const defaultCharacter = exports.defaultCharacter = ["+"];
+const defaultCharacter = exports.defaultCharacter = ["."];
 
 // minimum rank for using a command unless specified.
 exports.defaultRank = "@";
 
 // message sent to users pming the bot
-exports.pmMessage = `Sorry, I am a bot! Use ${defaultCharacter[0]}guide to view a list of some of my commands! Have a nice day!`;
+exports.pmMessage = `Sorry, I am a bot made by A Flying Phantom! Use ${defaultCharacter[0]}guide to view a list of **some** of my commands or PM my owner for more information! Have a nice day!`;
 
 // custom default ranks for different command keys
 exports.customRank = {
