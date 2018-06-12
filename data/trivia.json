@@ -266,7 +266,7 @@
 	{
 	    "question": "Sinnoh's underground can be visited once the player has obtained this Key Item.",
 	    "answers": ["Explorer Kit"]
-	},
+	}
 	{
 	    "question": "This item summons Heatran when brought to Stark Mountain or Reversal Mountain.",
 	    "answers": ["Magma Stone"]
@@ -276,8 +276,7 @@
 	    "answers": ["Trapinch"]
 	},
 	{
-	    "question": "What Pokemon trainer gives you a Dusk Stone in ORAS after defeating them?",
-	    "answers": ["Hex Maniac Valerie"]
+	    "question": "What Pokemon trainer gives you a Dusk Stone in ORAS after defeating them?",	    "answers": ["Hex Maniac Valerie"]
 	},
 	{
 	    "question": "What move increases the Attack and Sp. Attack of grounded Grass-type Pokemon?",
@@ -323,13 +322,12 @@
 	    "question": "What pokemon controls time?",
 	    "answers": ["Dialga"]
 	},
-	{
-	    "question": "What pokemon controls space?",
+	{	    "question": "What pokemon controls space?",
 	    "answers": ["Palkia"]
 	},
 	{
 	    "question": "Which Pokemon evolution line has no weaknesses due to their abilities?",
-	    "answers": ["Eelectross"]
+	    "answers": ["Eelektross"]
 	},
 	{
 	    "question": "What color are Raichu's cheeks?",
@@ -355,7 +353,7 @@
 	    "question": "What is the only Pokemon with the typing Water/Steel?",
 	    "answers": ["Empoleon"]
 	},
-	{
+	
 	    "question": "What is the only Pokemon with the typing Electric/Ground?",
 	    "answers": ["Stunfisk"]
 	},
@@ -590,8 +588,7 @@
 	{
 	    "question": "What **Fighting Type** Pokemon has the most evolutions?",
 	    "answers": ["Tyrogue"]
-	},
-	{
+	},	{
 	    "question": "I want to be the best Pokemon master ever. Who am I?",
 	    "answers": ["Ash"]
 	},
@@ -617,7 +614,7 @@
 	},
 	{
 	    "question": "Name a Pokemon that has a BST of 590",
-	    "answers": ["Alakazam-mega", "Altaria-mega", "Kangaskhan-mega", "Slowbro-mega", "Mega Alakazam", "Mega Altaria", "Mega Kangaskhan", "Mega Slowbro"]
+	    "answers": ["Altaria-mega", "Kangaskhan-mega", "Slowbro-Mega", "Mega Altaria", "Mega Kangaskhan", "Mega Slowbro"]
 	},
 	{
 	    "question": "And his name is.....",
@@ -661,7 +658,7 @@
 	},
 	{
 	    "question": "Who is the only in-game Champion to have perfect IV Pokémon?",
-	    "answers": ["Cynthia"]
+	    "answers": ["Cynthia"
 	},
 	{
 	    "question": "Who is the Bolt Strike Pokémon?",
@@ -671,7 +668,7 @@
 	    "question": "Name an Gen6 OU Pokémon with 110 base speed",
 	    "answers": ["Diancie-mega", "Gengar", "Latios", "Latias", "Metagross-mega"]
 	},
-	{
+	
 	    "question": "What is the only fully evolved starter WITHOUT a base stat divisible by 5?",
 	    "answers": ["Infernape"]
 	},
@@ -681,7 +678,7 @@
 	},
 	{
 	    "question": "Name a non-Mega Pokémon in BL.",
-	    "answers": ["Crawdaunt", "Diggersby", "Hawlucha", "Scolipede", "Staraptor", "Terrakion", "Togekiss", "Victini", "Volcarona", "Zygarde"]
+	    "answers": ["Crawdaunt", "Diggersby", "Hawlucha", "Scolipede", "Staraptor", "Terrakion", "Togekiss", "Victini", "Volcarona", "Zygarde"
 	},
 	{
 	    "question": "Name a starter that is banned from OU?",
@@ -691,7 +688,7 @@
 	    "question": "Prior to the release of HG/SS, which trainer had the strongest in-game team?",
 	    "answers": ["Barry"]
 	},
-	{
+	
 	    "question": "Using this move raises Special Attack, Special Defense and Speed by 1 stage.",
 	    "answers": ["Quiver Dance"]
 	},
@@ -724,7 +721,14 @@
 	    "answers": ["Hyperspace Hole"]
 	},
 	{
-	    "question": "What is the only poison type with 430 BST",
+	    "question": "What is the only poison type with 420 BST",
 	    "answers": ["Qwilfish"]
-	}
+	},  
+        {
+	    "question": "My Owner!"
+	    "answers": ["A Flying Phantom"]
+	} 
+        {
+	    "question":"Name one of the owners of Cerberus Server" 
+	    "answers":["A Flying Phantom", "Giovanni The Best"]
 ]
