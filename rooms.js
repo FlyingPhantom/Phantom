@@ -103,6 +103,9 @@ class Room {
         let userRank = user.getRank(this.id);
         if (user.userid === toId(Monitor.username) || Config.ranks[botsRank] < 2 || Config.ranks[botsRank] <= Config.ranks[userRank]) return false;
         msg = msg.trim().replace(/[ \u0000\u200B-\u200F]+/g, ' '); // removes extra spaces and null characters so messages that should trigger stretching do so
+        if (msg.startsWith('/raw') || msg.startsWith('/html')) {
+            return; // dont moderate lines with emotes for now.
+        }
 
         if (!this.userData[user.userid]) {
             this.userData[user.userid] = {
@@ -280,7 +283,6 @@ let addRoom = Rooms.add = function(room) {
     let roomid = toId(room, true);
     if (rooms.has(roomid)) return getRoom(room);
     rooms.set(roomid, new Room(room));
-    if (roomid !== "global") Db("autojoin").set(roomid, 1);
 };
 
 let getRoom = Rooms.get = function(room) {
@@ -289,13 +291,18 @@ let getRoom = Rooms.get = function(room) {
     return rooms.get(roomid);
 };
 
+let autojoinRoom = Rooms.autojoin = function(room) {
+    let roomid = toId(room, true);
+    if (roomid !== "global") Db("autojoin").set(roomid, 1);
+}
+
 let deleteRoom = Rooms.delete = function(room, keepAutojoin) {
     let roomid = toId(room, true);
     getRoom(roomid).end();
     rooms.delete(roomid);
     //console.log(roomid + ": " + rooms.has(roomid))
     if (!keepAutojoin) {
-        delete Db("autojoin").object()[roomid];
+        Db("autojoin").delete(roomid)
         Db.save();
     }
 };
