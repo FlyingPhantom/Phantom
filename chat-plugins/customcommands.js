@@ -24,7 +24,7 @@ exports.commands = {
         let targetRoom = room ? room.id : "global";
         let existing = Db("customcommands").get([targetRoom, target], null);
         if (!existing) return this.send("This room does not have that custom command.");
-        delete Db("customcommands").object()[targetRoom][target];
+        Db("customcommands").delete([targetRoom, target]);
         Db.save();
         this.send("The custom command \"" + target + "\" has been removed from this room.");
     },
