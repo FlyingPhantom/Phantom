@@ -127,7 +127,7 @@ exports.commands = {
                 return this.send("That's not a banned word in this room!");
             }
         }
-        delete Db("settings").object()[room.id].bannedWords[target];
+        Db("settings").delete([room.id, 'bannedWords', target]);
         Db.save();
         this.send("//" + target + "/i has been removed from this room's list of banned words");
     },
