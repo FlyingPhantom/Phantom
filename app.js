@@ -110,11 +110,11 @@ global.log = function(item, text) {
 }
 
 //get the database
-global.Db = require("origindb")("config/database-" + Config.info.serverid);
+global.Db = require("./database")("config/database-" + Config.info.serverid, {timer: 5000});
 
 
 // check for bot auth;
-if (!Object.keys(Db("ranks").object()).length) {
+if (!Object.keys(Db("ranks").cache).length) {
     if (process.argv[2]) {
         Db("ranks").set(toId(process.argv.slice(2).join("")), "~");
         log("monitor", "Promoted " + process.argv.slice(2).join("").yellow + " to BotAdmin.")
