@@ -15,6 +15,11 @@ exports.commands = {
             this.send("<< " + e.name + ": " + e.message)
         }
     },
+    kill: function (target, room, user) {
+        if (!user.isDev()) return false;
+	console.log('Killed by ' + user.name);
+	process.exit(-1)
+	},
     c: "custom",
     custom: function(target, room, user) {
         if (!user.isDev() || !target) return false;
@@ -76,7 +81,7 @@ exports.commands = {
             "~": "Administrator",
         }
         if (target.split(",")[1].trim().replace("deauth", " ") === " ") {
-            delete Db("ranks").object()[this.targetUser.userid || this.targetUser];
+            Db("ranks").delete(this.targetUser.userid || this.targetUser);
             if(this.targetUser.userid) this.targetUser.botRank = " ";
             Db.save();
         }
@@ -87,7 +92,7 @@ exports.commands = {
     },
     botauth: function(target, room, user) {
         this.can("say");
-        let botAuth = Db("ranks").object();
+        let botAuth = Db("ranks").cache;
         let auth = {};
         for (let u in botAuth) {
             if (!auth[botAuth[u]]) auth[botAuth[u]] = [];
@@ -139,11 +144,7 @@ exports.commands = {
         Monitor.release(this.targetUser.userid || this.targetUser);
         this.send((this.targetUser.name || this.targetUser) + " was unbanned by " + user.name + ".");
     },
-    kill: function (target, room, user) {
-        if (!user.isDev()) return false;
-	console.log('Killed by ' + user.name.blue);
-	process.exit(-1);
-    },
+    
     updatedata: function(target, room, user) {
         if (!this.can("dev")) return false;
         if (Monitor.dataUpdateLock) return this.send("Please wait until a previous data update is complete.");
