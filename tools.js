@@ -187,6 +187,25 @@ const tools = exports.Tools = {
         req.end();
     },
 
+    dehtml: function (message) {
+        if (message || typeof message !== "string") return "";
+        // fix formatting
+        message = message.replace(/(<(?:\/)?[a-z](?:\s.*?)?>)/g, m => {
+            let match = toId(m);
+            let formatting = match.charAt(0);
+            if (formatting === "b") return "*"; // bold
+            if (formatting === "s") return "~"; // strikethrough
+            if (formatting === "i") return "_"; // italics
+            return m;
+        }).replace(/(<(?:\/)?ss type=\".+?\">.*<\/ss>)/g, m => {
+            return "(" + m.split("\"")[1] + ")";
+        });
+        // deemotify
+        // dehtmlize
+        message = message.replace(/\&lt\;/g, '<').replace(/\&gt\;/g, '>').replace(/\&quot\;/g, '\"').replace(/\&apos\;/g, '\'').replace(/\&\#x2f\;/g, '\/').replace(/\&amp\;/g, '&');
+        return message;
+    },
+
     helpEntries: require("./help.js").help,
 };
 
