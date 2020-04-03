@@ -1,4 +1,4 @@
-# Cerberus-E 
+# Phantom Ozonix
 A new Bot for Pokemon Showdown side server
 
 Set-up
@@ -9,11 +9,11 @@ You will be given admin privileges on the bot that way.
 
 License
 -------
-Cerberus-E is distributed under the terms of the [MIT License][1].
+Phantom Ozonix is distributed under the terms of the [MIT License][1].
 
-  [1]: https://github.com/PowerHitter0418/Cerberus-E/blob/master/LICENSE
+  [1]: https://github.com/FlyingPhantom/Phantom-Ozonix/blob/master/LICENSE
 
-[![Dependency Status](https://david-dm.org/PowerHitter0418/Cerberus-E.svg)](https://david-dm.org/PowerHitter0418/Cerberus-E)
+[![Dependency Status](https://david-dm.org/FlyingPhantom/Phantom-Ozonix.svg)](https://david-dm.org/FlyingPhantom/Phantom-Ozonix)
 
 Base Repository 
 ---------------
