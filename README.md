@@ -13,7 +13,8 @@ Phantom Ozonix is distributed under the terms of the [MIT License][1].
 
   [1]: https://github.com/FlyingPhantom/Phantom-Ozonix/blob/master/LICENSE
 
-[![Dependency Status](https://david-dm.org/FlyingPhantom/Phantom-Ozonix.svg)](https://david-dm.org/FlyingPhantom/Phantom-Ozonix)
+
+[![dependencies Status](https://david-dm.org/FlyingPhantom/Phantom-Ozonix/status.svg)](https://david-dm.org/FlyingPhantom/Phantom-Ozonix)
 
 Base Repository 
 ---------------
