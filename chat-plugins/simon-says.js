@@ -27,7 +27,7 @@ class SimonsaysGame extends Rooms.botGame {
         this.gameId = "simonsays";
         this.roundNumber = 0;
         
-        this.sendRoom("Harmgame!A new game of Simon Says is starting. ``" + this.room.commandCharacter[0] + "join`` to join the game.");
+        this.sendRoom("A new game of Simon Says is starting. ``" + this.room.commandCharacter[0] + "join`` to join the game.");
     }
     
     onStart () {
