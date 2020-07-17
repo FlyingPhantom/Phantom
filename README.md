@@ -1,6 +1,13 @@
 # Phantom Ozonix
 A new Bot for Pokemon Showdown side server
 
+# Inactivity notice
+
+This has been succeeded by [Phantom Ozonix][2].
+I am no longer developing this
+
+[2]: https://github.com/FlyingPhantom/Phantom-Ozonix
+
 Set-up
 ------
 ``npm install``
